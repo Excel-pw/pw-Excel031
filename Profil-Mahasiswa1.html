@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profil Mahasiswa</title>
+  <style>
+    :root { --ungu:#6d28d9; --kuning:#b45309; --hijau:#047857; --pink:#be185d; --biru:#1d4ed8; --teks:#1f2937; --latar:#f3f5fb; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 4rem; }
+    body { margin:0; font-family:"Segoe UI",Roboto,Arial,sans-serif; color:var(--teks); background:var(--latar); line-height:1.7; }
+
+    /* ---------- VERIFIKASI 2x KLIK ---------- */
+    body.kunci > header, body.kunci > nav, body.kunci > main, body.kunci > footer { display:none; }
+    body:not(.kunci) #gerbang { display:none; }
+    #gerbang { min-height:100vh; display:flex; align-items:center; justify-content:center; padding:1rem;
+      background:linear-gradient(135deg,#0f172a,#1e3a8a 60%,#4c1d95); }
+    .kotak { background:#fff; border-radius:14px; padding:1.75rem; width:100%; max-width:380px; text-align:center;
+      box-shadow:0 8px 30px rgba(0,0,0,.35); }
+    .kotak h2 { margin:0 0 .3rem; font-family:Georgia,serif; color:var(--ungu); }
+    .langkah { margin:0 0 1rem; font-size:.95rem; }
+    .kotak button { width:100%; padding:.8rem; border:0; border-radius:8px; background:var(--biru); color:#fff;
+      font-size:1rem; font-weight:600; cursor:pointer; }
+    .kotak button:hover { background:#1e40af; }
+
+    /* ---------- HEADER ---------- */
+    header { background:linear-gradient(135deg,#0f172a,#1e3a8a 60%,#4c1d95); color:#e2e8f0; text-align:center; padding:3rem 1rem; }
+    header h1 { margin:0 0 .5rem; font-family:Georgia,serif; font-size:clamp(2rem,6vw,3.2rem); color:#7dd3fc;
+      background:linear-gradient(90deg,#7dd3fc,#f9a8d4,#fde68a); -webkit-background-clip:text; background-clip:text;
+      -webkit-text-fill-color:transparent; }
+    header p { margin:0; }
+
+    /* ---------- NAVIGASI ---------- */
+    nav { position:sticky; top:0; z-index:10; display:flex; flex-wrap:wrap; justify-content:center; gap:.4rem;
+      padding:.6rem 1rem; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,.12); }
+    nav a { padding:.35rem .9rem; border-radius:999px; color:var(--teks); text-decoration:none; font-weight:600; font-size:.95rem; }
+    nav a:hover { background:var(--biru); color:#fff; }
+
+    /* ---------- MAIN ---------- */
+    main { max-width:860px; margin:2rem auto; padding:0 1rem; }
+    section { background:#fff; border-radius:14px; border-left:6px solid var(--w); padding:1.5rem 1.75rem;
+      margin-bottom:1.5rem; box-shadow:0 4px 14px rgba(0,0,0,.08); }
+    section h2 { margin:0 0 .8rem; font-family:Georgia,serif; font-size:1.7rem; color:var(--w); }
+    #tentang { --w:var(--ungu); } #hobi { --w:var(--kuning); } #belajar { --w:var(--hijau); }
+    #pendidikan { --w:var(--pink); } #kontak { --w:var(--biru); }
+    .profil { display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap; }
+      .profil img { width:140px; height:140px; object-fit:cover; border-radius:50%; border:4px solid var(--ungu); background:#ede9fe; }
+    .profil p { flex:1; min-width:200px; margin:0; }
+    ul, ol { margin:0; padding-left:1.4rem; }
+    li::marker { color:var(--w); font-weight:700; }
+    .tb { overflow-x:auto; }
+    table { width:100%; border-collapse:collapse; }
+    th, td { padding:.7rem .9rem; text-align:left; }
+    th { background:var(--pink); color:#fff; }
+    tbody tr:nth-child(even) { background:#fdf2f8; }
+    #kontak a { color:var(--biru); font-weight:600; text-decoration:none; }
+    #kontak a:hover { text-decoration:underline; }
+
+    /* ---------- FOOTER ---------- */
+    footer { background:#0f172a; color:#cbd5e1; text-align:center; padding:1.5rem 1rem; }
+    footer p { margin:0; }
+  </style>
+  </head>
+<body class="kunci">
+
+  <div id="gerbang">
+    <div class="kotak">
+      <h2>Verifikasi 2 Langkah</h2>
+      <p class="langkah" id="ket">Langkah 1 dari 2: klik tombol di bawah</p>
+      <button type="button" id="tombol">Klik di sini (1/2)</button>
+    </div>
+  </div>
+  <header>
+    <h1>Profil Mahasiswa</h1>
+    <p>Perkenalan singkat tentang saya dan perjalanan belajar saya</p>
+  </header>
+
+  <nav>
+    <a href="#tentang">tentang saya</a>
+    <a href="#hobi">hobi</a>
+    <a href="#belajar">tahapan belajar</a>
+  </nav>
+
+  <main>
+    <section id="tentang">
+        <h2>Tentang saya</h2>
+        <div class="profil">
+            <img src="foto.wedp.webp" alt="\Foto profil mahasiswa">
+            <p>Halo,nama saya Excel leivinha.Saya mahasiswa yang sedang belajar pengembangan web.</p>
+        </div>
+    </section>
+
+    <section id="hobi">
+        <h2>Hobi</h2>
+        <ul>
+            <li>Olahraga</li>
+            <li>Dengar musik</li>
+            <li>Menonton film action</li>
+        </ul>
+    </section>
+    
+    <section id="belajar">
+        <h2>Tahapan belajar</h2>
+        <ol>
+            <li>Mempelajari struktur dasar 
+                HTML</li>
+            <li>Membuat teks,daftar, dan 
+                tabel</li>
+            <li>Menambahkan gambar dan 
+                tautan</li>   
+            <li>Memvalidasi dokumen HTML</li>
+        </ol>
+    </section>
+
+    <section id="Pendidikan">
+        <h2>Riwayat Pendidikan</h2>
+        <div class="tb">
+          <table>
+            <thead>
+              <tr><th>Jenjang</
+                th><th>Institusi</th><th>Tahun</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>SD</td><td>
+                SD Kasih Trubus</td><td>2014-2020</td></tr>
+                    <tr><td>SMP</td><td>
+                SMP Negeri 1 Lubuk besar</td><td>2020-2023</td></tr>
+                    <tr><td>SMA</td></tr>td>
+                SMK Negeri 2 KOBA</td><td>2023-2026</td></tr>
+                    <tr><td>Perguruan tinggi</td><td>
+                ISB Atmaluhur</td><td>2026-sekarang</td></tr>
+            </tbody>
+          </table>
+        </div>
+    </section>
+            
+    <section id="kontak">
+        <h2>Kontak</h2>
+        <ul>
+            <li><a href="malito:2611500031@mahasiswa.atmaluhur.ac.id">2611500031@mahasiswa.atmaluhur.ac.id</a></li>
+            <li><a href="https://instagram.com/excel_lee08" target="_blank"
+                rel="noopener">GitHub</a></li>
+        </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 [Nama Anda]. Semua hak dilindungi.</p>
+  </footer>
+
+  <script>
+    (function () {
+      var klik = 0;
+      var tombol = document.getElementById("tombol");
+      tombol.addEventListener("click", function () {
+        klik++;
+        if (klik === 1) {
+          document.getElementById("ket").textContent = "Langkah 2 dari 2: klik sekali lagi";
+          tombol.textContent = "Klik lagi untuk membuka profil (2/2)";
+        } else {
+          document.body.classList.remove("kunci");
+          window.scrollTo(0, 0);
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
