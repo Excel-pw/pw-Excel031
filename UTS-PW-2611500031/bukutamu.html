@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buku Tamu - Kedai Kopi Senja</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a class="logo" href="index.html">☕ Kedai Kopi Senja</a>
+    <nav>
+      <ul>
+        <li><a href="index.html#beranda">Beranda</a></li>
+        <li><a href="index.html#tentang">Tentang Kami</a></li>
+        <li><a href="index.html#layanan">Layanan</a></li>
+        <li><a href="index.html#galeri">Galeri</a></li>
+        <li><a href="index.html#kontak">Kontak</a></li>
+        <li><a href="bukutamu.html" class="aktif">Buku Tamu</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section>
+    <h2>Buku Tamu</h2>
+    <form id="formTamu" action="hasil.html" method="get" novalidate>
+      <label for="nm">Nama Lengkap <span class="wajib">*</span></label>
+      <input type="text" id="nm" name="nm_lengkap031" maxlength="50">
+      <div class="err" id="e_nm"></div>
+
+      <label for="em">Email <span class="wajib">*</span></label>
+      <input type="email" id="em" name="email031" maxlength="50">
+      <div class="err" id="e_em"></div>
+
+      <label for="as">Asal / Instansi</label>
+      <input type="text" id="as" name="asal_instansi123" maxlength="50">
+
+      <label for="sb">Subjek</label>
+      <input type="text" id="sb" name="subjek031" maxlength="50">
+
+      <label for="ps">Pesan / Komentar <span class="wajib">*</span></label>
+      <textarea id="ps" name="pesan031" rows="4" maxlength="200"></textarea>
+      <div class="err" id="e_ps"></div>
+
+      <label for="tg">Tanggal Kunjungan</label>
+      <input type="date" id="tg" name="tgl_kunjungan031">
+
+      <button class="btn" type="submit">Kirim</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Kedai Kopi Senja. Semua hak dilindungi.</p>
+  <p>
+    <a href="https://instagram.com/excelee08" target="_blank">Instagram</a>>
+<a href="https://wa.me/6282181452884" target="_blank">WhatsApp</a>
+  </p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
